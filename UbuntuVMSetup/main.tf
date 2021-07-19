@@ -1,8 +1,8 @@
 /* Azure as provider */
 provider "azurerm" {
   features {}
-  tenant_id       = "b9d2c79d-8655-430e-8cbb-d458178fd6b8"
-  subscription_id = "3b415d59-619a-4a6f-8a0f-21eedfa275f3"
+  tenant_id       = ""
+  subscription_id = ""
 }
 
 /* Create Resource Group */
