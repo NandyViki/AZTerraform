@@ -1,0 +1,7 @@
+prefix     = "TFEg-Ubu"
+location   = "South India"
+vnetcidr   = "172.33.0.0/26"
+subnetcidr = "172.33.0.0/28"
+vmsize     = "Standard_B1s"
+usrname    = "manager"
+passwd     = "SGArchitect007"

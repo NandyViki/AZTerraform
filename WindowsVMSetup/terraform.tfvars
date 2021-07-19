@@ -1,0 +1,7 @@
+prefix     = "TFExample"
+location   = "South India"
+vnetcidr   = "172.33.0.0/26"
+subnetcidr = "172.33.0.0/28"
+vmsize     = "Standard_A1_v2"
+usrname    = "manager"
+passwd     = "SGArchitect007"

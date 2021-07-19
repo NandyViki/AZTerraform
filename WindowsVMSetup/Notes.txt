@@ -1,0 +1,48 @@
+
+Main.tf
+
+1) select the provider - here its azure hence we begin with writing the provider
+block with our tenant and subscription details.
+
+2)create a resource group
+
+3) create a vnet with desired cidr
+
+4) create a subnet with desired cidr
+
+5) create NIC and ensure to have public_ip_address_id field in this so that we can
+return the id of the pip function here. this ensures the nic is attached to the pip we
+create.
+
+6)create pip
+
+7)create a NSG. To ensure this NSG is attached to our NIC created in Step 5, we need to 
+add this module :
+
+resource "azurerm_network_interface_security_group_association" "example" {
+  network_interface_id      = azurerm_network_interface.example.id
+  network_security_group_id = azurerm_network_security_group.example.id
+}
+
+8)Finally, create the VM. Its here we attach the NIC module's id so that the VM and NIC we created
+  in Step 5 are associated.
+
+
+variables.tf
+
+* Declare all the global variables in this file.
+
+terraform.tfvars
+
+* Specify the values for the variables in this file.
+
+
+***Commands to run ***
+
+terraform fmt
+
+terraform init
+
+terraform plan (optional)
+
+terraform apply -var-file="terraform.tfvars" -auto-approve
